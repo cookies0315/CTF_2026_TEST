@@ -336,7 +336,7 @@ struct User {
 ### 編譯所有練習
 
 ```bash
-cd CTF2026
+cd CTF2026/0312TEST
 ./build_all.sh
 ```
 
@@ -344,6 +344,7 @@ cd CTF2026
 
 ```bash
 # 基本練習（使用 ASan 檢測）
+cd 0312TEST
 ./uaf_01
 ./uaf_02
 # ...
@@ -353,6 +354,7 @@ cd CTF2026
 
 ```bash
 # CTF 挑戰（無 ASan，讓漏洞存在）
+cd 0312TEST
 ./uaf_08
 ```
 
@@ -404,16 +406,17 @@ fgets(buffer, sizeof(buffer), stdin);  // 使用安全函數
 ```
 CTF2026/
 ├── README.md                 # 本檔案
-├── build_all.sh              # 編譯腳本
-├── uaf_01_basic.c           # 練習 1-7 原始碼
-├── uaf_02_double_free.c
-├── uaf_03_buffer_overflow.c
-├── uaf_04_dangling_pointer.c
-├── uaf_05_struct.c
-├── uaf_06_fixed.c
-├── uaf_07_heap_spray.c
-├── uaf_08_ctf.c              # CTF 挑戰原始碼
-└── uaf_01 ~ uaf_08           # 編譯後的執行檔
+└── 0312TEST/                 # UAF 練習實驗室
+    ├── build_all.sh          # 編譯腳本
+    ├── uaf_01_basic.c        # 練習 1-7 原始碼
+    ├── uaf_02_double_free.c
+    ├── uaf_03_buffer_overflow.c
+    ├── uaf_04_dangling_pointer.c
+    ├── uaf_05_struct.c
+    ├── uaf_06_fixed.c
+    ├── uaf_07_heap_spray.c
+    ├── uaf_08_ctf.c          # CTF 挑戰原始碼
+    └── uaf_01 ~ uaf_08       # 編譯後的執行檔
 ```
 
 ---
